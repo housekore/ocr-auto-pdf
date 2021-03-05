@@ -1,13 +1,9 @@
-![ocrmypdf-auto logo](https://raw.githubusercontent.com/cmccambridge/ocrmypdf-auto/master/media/logo.png)
 
-# cmccambridge/ocrmypdf-auto
-[![CircleCI](https://circleci.com/gh/cmccambridge/ocrmypdf-auto/tree/master.svg?style=shield)](https://circleci.com/gh/cmccambridge/ocrmypdf-auto/tree/master)
 
 This container automates one stage in a "paperless" document processing pipeline: Take all the PDFs in a folder, run OCR on them, and save the output to another folder. It combines the excellent tools [OCRmyPDF][ocrmypdf] and [tesseract-ocr][tesseract] with `inotify`-based file monitoring and some new configurability.
 
 For example, you could configure a wireless document scanner to save all images to one volume, and use this container to monitor all new incoming files, OCR them, and write the finished (searchable!) PDFs to another volume.
-
-![ocrmypdf-auto workflow. Scan to input volume, ocrmypdf-auto runs, collect results in output volume](https://raw.githubusercontent.com/cmccambridge/ocrmypdf-auto/master/media/flow.png)
+auto/master/media/flow.png)
 
 * [Usage](#usage)
 * [Volumes](#volumes)
@@ -170,16 +166,6 @@ Notes:
 |Variable|`USERMAP_UID`|`99`|This is the UID of unRAID's `nobody` user. You should use this value unless you really know what you're doing!|
 |Variable|`USERMAP_GID`|`100`|This is the GID of unRAID's `users` group. You should use this value unless you really know what you're doing!|
 
-[unraid]: https://lime-technology.com/
-[ca]: https://lime-technology.com/forums/topic/38582-plug-in-community-applications/
-[template]: https://github.com/cmccambridge/unraid-templates/blob/master/cmccambridge/ocrmypdf-auto.xml
-
-## Future Work
-
-Some specific future work items I have planned:
-* [#3][i3] Evaluate image size reductions of an Alpine-based docker image... OR, migrate to the upstream `OCRmyPDF` docker image for ease of maintenance.
-
-Please also see the [GitHub Issues][issues], where you can report any problems or make any feature requests as well!
 
 [i3]: https://github.com/cmccambridge/ocrmypdf-auto/issues/3
 [issues]: https://github.com/cmccambridge/ocrmypdf-auto/issues/
