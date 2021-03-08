@@ -38,6 +38,7 @@ RUN apt-get update && \
         qpdf \
         tesseract-ocr \
         tesseract-ocr-eng \
+		tesseract-ocr-all \
         tesseract-ocr-osd \
         unpaper \
     && rm -rf /var/lib/apt/lists/*
